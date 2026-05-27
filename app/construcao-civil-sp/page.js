@@ -347,7 +347,7 @@ export default function ServicePage() {
             Chamar no WhatsApp <FaArrowRight />
           </a>
         </div>
-      </section>section
+      </section>
 
       <Footer />
       <FloatingButtons />
