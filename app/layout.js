@@ -4,12 +4,18 @@ const siteUrl = 'https://dvoxconstrucoes.com.br';
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
+
+  manifest: '/manifest.json',
+
   title: {
-    default: 'D/vox Construções São Paulo | Construção Civil, Reformas e Gerenciamento de Obras',
+    default:
+      'Grupo D/vox Engenharia e Construções São Paulo | Construção Civil, Reformas e Gerenciamento de Obras',
     template: '%s | D/vox Construções São Paulo',
   },
+
   description:
     'D/vox Construções e Reformas São Paulo: construção civil, reformas residenciais e comerciais premium, gerenciamento de obras, empreitada total, restauração de fachadas, projetos e soluções completas em São Paulo.',
+
   keywords: [
     'construção civil em São Paulo',
     'construtora em São Paulo',
@@ -20,21 +26,48 @@ export const metadata = {
     'empreitada total SP',
     'restauração de fachadas',
     'Dvox Construções',
+    'engenharia em São Paulo',
+    'construção civil no interior de São Paulo',
+    'construção civil na Grande São Paulo',
+    'reformas comerciais na Grande São Paulo',
+    'reformas residenciais em São Paulo',
+    'empresa de construção civil SP',
+    'engenharia e construções São Paulo',
   ],
-  authors: [{ name: 'D/vox Construções e Reformas São Paulo' }],
+
+  authors: [
+    {
+      name: 'D/vox Construções e Reformas São Paulo',
+    },
+  ],
+
   creator: 'D/vox Construções e Reformas São Paulo',
+
   publisher: 'D/vox Construções e Reformas São Paulo',
+
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/icon-512.png', type: 'image/png', sizes: '512x512' },
+      {
+        url: '/favicon.ico',
+        sizes: 'any',
+      },
+
+      {
+        url: '/icon-512.png',
+        type: 'image/png',
+        sizes: '512x512',
+      },
     ],
+
     shortcut: '/favicon.ico',
+
     apple: '/icon-512.png',
   },
+
   robots: {
     index: true,
     follow: true,
+
     googleBot: {
       index: true,
       follow: true,
@@ -43,30 +76,46 @@ export const metadata = {
       'max-video-preview': -1,
     },
   },
-  alternates: { canonical: '/' },
+
+  alternates: {
+    canonical: '/',
+  },
+
   openGraph: {
     type: 'website',
+
     locale: 'pt_BR',
+
     url: siteUrl,
-    title: 'D/vox Construções São Paulo | Do projeto ao resultado extraordinário',
+
+    title:
+      'Grupo D/vox Engenharia e Construções São Paulo | Do projeto ao resultado extraordinário',
+
     description:
       'Construção civil, reformas premium, gerenciamento de obras, empreitada total e soluções completas para residências, empresas e obras prediais em São Paulo.',
+
     siteName: 'D/vox Construções São Paulo',
+
     images: [
       {
-        url: '/og-image-2026.jpg',
+        url: `${siteUrl}/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: 'D/vox Construções São Paulo',
+        alt: 'D/vox Engenharia e Construções São Paulo',
       },
     ],
   },
+
   twitter: {
     card: 'summary_large_image',
-    title: 'D/vox Construções São Paulo | Construção Civil e Reformas',
+
+    title:
+      'D/vox Construções São Paulo | Construção Civil e Reformas',
+
     description:
       'Construção civil, reformas premium, gerenciamento de obras e soluções completas em São Paulo.',
-    images: ['/og-image-2026.jpg'],
+
+    images: [`${siteUrl}/og-image.jpg`],
   },
 };
 
@@ -75,7 +124,12 @@ export default function RootLayout({ children }) {
     <html lang="pt-BR" className="scroll-smooth">
       <head>
         <meta name="theme-color" content="#07111f" />
-        <meta name="format-detection" content="telephone=yes" />
+
+        <meta
+          name="format-detection"
+          content="telephone=yes"
+        />
+
         <link rel="manifest" href="/manifest.json" />
 
         <script src="https://cdn.tailwindcss.com" />
@@ -93,28 +147,56 @@ export default function RootLayout({ children }) {
                       dvoxConcrete: '#f3f4f6',
                       dvoxGold: '#d6a84f'
                     },
+
                     boxShadow: {
-                      premium: '0 30px 90px rgba(7,17,31,.22)',
-                      redglow: '0 24px 80px rgba(215,25,32,.25)'
+                      premium:
+                        '0 30px 90px rgba(7,17,31,.22)',
+
+                      redglow:
+                        '0 24px 80px rgba(215,25,32,.25)'
                     },
+
                     keyframes: {
-                      float: { 
-                        '0%,100%': { transform:'translateY(0)' }, 
-                        '50%': { transform:'translateY(-14px)' } 
+                      float: {
+                        '0%,100%': {
+                          transform: 'translateY(0)'
+                        },
+
+                        '50%': {
+                          transform: 'translateY(-14px)'
+                        }
                       },
-                      draw: { 
-                        '0%': { strokeDashoffset: 900 }, 
-                        '100%': { strokeDashoffset: 0 } 
+
+                      draw: {
+                        '0%': {
+                          strokeDashoffset: 900
+                        },
+
+                        '100%': {
+                          strokeDashoffset: 0
+                        }
                       },
+
                       pulseLine: {
-                        '0%,100%': { opacity:.45 },
-                        '50%': { opacity:1 }
+                        '0%,100%': {
+                          opacity: .45
+                        },
+
+                        '50%': {
+                          opacity: 1
+                        }
                       }
                     },
+
                     animation: {
-                      float:'float 5s ease-in-out infinite',
-                      draw:'draw 4s ease forwards',
-                      pulseLine:'pulseLine 2.8s ease-in-out infinite'
+                      float:
+                        'float 5s ease-in-out infinite',
+
+                      draw:
+                        'draw 4s ease forwards',
+
+                      pulseLine:
+                        'pulseLine 2.8s ease-in-out infinite'
                     }
                   }
                 }
