@@ -10,6 +10,8 @@ export default function sitemap() {
     '/construcao-predial-sp',
     '/gerenciamento-de-obras-sp',
     '/restauracao-de-fachadas-sp',
+    '/obras-hospitalares-sp',
+    '/obras',
   ];
 
   return pages.map((path) => ({

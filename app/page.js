@@ -61,6 +61,7 @@ const seoLinks = [
   ['/construcao-predial-sp', 'Construção predial SP', 'Execução e apoio para obras prediais, fachadas e empreendimentos.'],
   ['/gerenciamento-de-obras-sp', 'Gerenciamento de obras SP', 'Gestão técnica, planejamento, cronograma e acompanhamento de obras.'],
   ['/restauracao-de-fachadas-sp', 'Restauração de fachadas SP', 'Revitalização, pintura e valorização de fachadas em São Paulo.'],
+  ['/obras-hospitalares-sp', 'Obras Hospitalares em São Paulo', 'Execução de obras hospitalares, reformas hospitalares, adequações técnicas ampliações e modernizações de ambientes de saúde em São Paulo.'],
 ];
 
 function JsonLd() {
@@ -326,7 +327,7 @@ export default function Home() {
                   </p>
 
                   <div className="mt-6 inline-flex items-center gap-2 text-sm font-black text-[#07111f] group-hover:text-[#d71920]">
-                    Ver página <FaArrowRight />
+                    Saiba mais <FaArrowRight />
                   </div>
                 </a>
               </Reveal>
